@@ -2,12 +2,14 @@
 
 var spacecatControllers = angular.module('spacecatControllers', []);
 
-spacecatApp.controller('CatListCtrl', ['$scope', '$http',
-  function($scope, $http){
-    $http.get('http://localhost:9393/spacecats').success(function(data) {
-      $scope.cats = data;
-    });
+spacecatApp.controller('CatListCtrl', ['$scope', 'Spacecat',
+  function($scope, Spacecat){
+    //$http.get('http://localhost:9393/spacecats').success(function(data) {
+    //  $scope.cats = data;
+    //});
  
+    $scope.cats = Spacecat.query();
+
     $scope.orderProp = 'name';
   }]);
 

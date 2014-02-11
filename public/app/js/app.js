@@ -12,7 +12,8 @@
 var spacecatApp = angular.module('spacecatApp', [
   'ngRoute',
   'spacecatControllers',
-  'spacecatFilters'
+  'spacecatFilters',
+  'spacecatServices'
 ]);
 
 spacecatApp.config(['$routeProvider',
@@ -20,6 +21,10 @@ spacecatApp.config(['$routeProvider',
     $routeProvider.
       when('/cats', {
         templateUrl: 'partials/cat-list.html',
+        controller: 'CatListCtrl'
+      }).
+      when('/dashboard', {
+        templateUrl: 'partials/cat-dashboard.html',
         controller: 'CatListCtrl'
       }).
       when('/cats/:catId', {
