@@ -27,6 +27,10 @@ spacecatApp.config(['$routeProvider',
         templateUrl: 'partials/cat-dashboard.html',
         controller: 'CatListCtrl'
       }).
+      when('/new', {
+        templateUrl: 'partials/cat-form.html',
+        controller: 'CatListCtrl'
+      }).
       when('/cats/:catId', {
         templateUrl: 'partials/cat-detail.html',
         controller: 'CatDetailCtrl'

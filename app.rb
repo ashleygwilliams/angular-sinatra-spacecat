@@ -29,4 +29,10 @@ class SpacecatApp < Sinatra::Application
     @spacecat.to_json
   end
 
+  post '/spacecats' do
+    @spacecat = Spacecat.create!(params)
+
+    redirect '/'
+  end
+
 end

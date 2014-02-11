@@ -14,6 +14,15 @@ h1 {
   font-size: 32px;
 }
 
+.new {
+  float: right;
+}
+
+button {
+  background-color: lightblue;
+  padding: 20px;
+}
+
 .jumbo {
   text-align: center;
   padding: 20px;
@@ -21,7 +30,14 @@ h1 {
   margin: 20px 0;
 }
 
-#search, select {
+label {
+  padding: 10px;
+  margin: 20px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+#search, select, input {
   width: 500px;
   color: black;
   border: lightblue solid 2px;
